@@ -44,7 +44,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="principal.jsp">
           <i class="fas fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -61,12 +61,12 @@
       <!-- Nav Item - Utilities Collapse Menu -->
        <li class="nav-item">
         <a class="nav-link" href="paciente.jsp">
-          <i class="fas fa-file-alt"></i>
+          <i class="fas fa-user-friends"></i>
           <span>Paciente</span></a>
       </li>
          <li class="nav-item">
         <a class="nav-link" href="consulta.jsp">
-          <i class="fas fa-file-alt"></i>
+          <i class="fal fa-phone-office"></i>
           <span>Consulta</span></a>
       </li>
 

@@ -82,7 +82,6 @@
                 <%}
                 %>
             </td>
-            <th>Tratamiento</th>
             <td></td>
         </tr>
         <tr>

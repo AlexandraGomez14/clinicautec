@@ -87,4 +87,18 @@ public class CitaModelo extends Conexion{
             System.out.println("error en insercion de cita "+e);
         }
     }
+    
+//    public List<Cita> allCitas(){
+//        try {
+//            String sql ="select c.codCita,c.estado,c.fechaCita,c.hora, "+
+//                        "c.consultorio,p.primerNombre,p.primerApellido,d.primerNombre,d.primerApellido " +
+//                        "from citas c " +
+//                        "inner join paciente p " +
+//                        "on c.codPaciente = p.codPaciente " +
+//                        "inner join doctor d " +
+//                        "on d.codDoctor = c.codDoctor";
+//        } catch (Exception e) {
+//        }
+//    }
+    
 }
