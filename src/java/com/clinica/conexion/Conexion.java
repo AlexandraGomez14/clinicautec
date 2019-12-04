@@ -7,10 +7,17 @@ import java.sql.*;
 
 public class Conexion {
 
-    private String user = "usuario_java";
-    private String contra = "Admin.123";
-    private String url = "jdbc:sqlserver://DESKTOP-4QMPSUH\\ALEGOMEZ\\localhost:1433;databaseName=base1";
-    private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+//    private String user = "usuario_java";
+//    private String contra = "Admin.123";
+//    private String url = "jdbc:sqlserver://DESKTOP-4QMPSUH\\ALEGOMEZ\\localhost:1433;databaseName=base1";
+//    private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+//    PreparedStatement pre;
+    
+    
+    private String user = "root";
+    private String contra = "";
+    private String url = "jdbc:mysql://localhost:3306/base1";
+    private String driver = "com.mysql.jdbc.Driver";
     PreparedStatement pre;
     
     private Connection con;

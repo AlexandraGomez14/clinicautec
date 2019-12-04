@@ -88,17 +88,36 @@ public class CitaModelo extends Conexion{
         }
     }
     
-//    public List<Cita> allCitas(){
-//        try {
-//            String sql ="select c.codCita,c.estado,c.fechaCita,c.hora, "+
-//                        "c.consultorio,p.primerNombre,p.primerApellido,d.primerNombre,d.primerApellido " +
-//                        "from citas c " +
-//                        "inner join paciente p " +
-//                        "on c.codPaciente = p.codPaciente " +
-//                        "inner join doctor d " +
-//                        "on d.codDoctor = c.codDoctor";
-//        } catch (Exception e) {
-//        }
-//    }
+    public List<CitasAll> allCitas(){
+        List<CitasAll>listsAllCitas = new ArrayList<>();
+        try {
+            this.conectar();
+            String sql ="select c.codCita as codCita,c.estado,c.fechaCita,c.fechaActual,c.hora,c.consultorio,p.primerNombre as primerNombrePaciente, p.primerApellido as primerApellidoPaciente,d.primerNombre as primerNombreDoctor,d.primerApellido as primerApellidoDoctor " +
+                        "from citas c " +
+                        "inner join paciente p " +
+                        "on p.codPaciente = c.codPaciente " +
+                        "inner join doctor d " +
+                        "on d.codDoctor = c.codDoctor";
+            pre = this.getCon().prepareStatement(sql);
+            res = pre.executeQuery();
+            while(res.next()){
+                CitasAll ci = new CitasAll();
+                ci.setCodCita(res.getString("codCita"));
+                ci.setPrimerNombrePaciente(res.getString("primerNombrePaciente"));
+                ci.setPrimerApellidoPaciente(res.getString("primerApellidoPaciente"));
+                ci.setFechaCita(res.getString("fechaCita"));
+                ci.setFechaActual(res.getString("fechaActual"));
+                ci.setHora(res.getString("hora"));
+                ci.setEstado(res.getString("estado"));
+                ci.setConsultorio(res.getString("consultorio"));
+                ci.setPrimerNombreDoctor(res.getString("primerNombreDoctor"));
+                ci.setPrimerApellidoDoctor(res.getString("primerApellidoDoctor"));
+                listsAllCitas.add(ci);
+            }
+        } catch (Exception e) {
+            System.out.println("error en mostrar todas las citas modelo");
+        }
+        return listsAllCitas;
+    }
     
 }

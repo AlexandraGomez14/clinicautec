@@ -37,7 +37,8 @@
             </td>
             <th>Fecha de Cita</th>
             <td>
-                <input type="date" name="fCita" class="form-control" pattern="dd/MM/yyyy"/>
+                <!--<input type="date" name="fCita" class="form-control" pattern="dd/MM/yyyy" data-date-format="dd/MM/yyyy"/>-->
+                <input type="date" name="fCita" class="form-control" >
             </td>
         </tr>
         <tr>

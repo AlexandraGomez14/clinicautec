@@ -7,7 +7,6 @@ package com.clinica.controladores;
 
 import com.clinica.modelo.Consulta;
 import com.clinica.modelo.ConsultaModelo;
-import com.clinica.modelo.Datos;
 import com.clinica.modelo.DetalleConsulta;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -51,6 +50,7 @@ public class ConsultaController extends HttpServlet {
         ConsultaModelo cm = new ConsultaModelo();
         Consulta c = new Consulta();
         DetalleConsulta dc = new DetalleConsulta();
+        String val="";
         try {
             
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
@@ -70,8 +70,10 @@ public class ConsultaController extends HttpServlet {
             dc.setCodServicio(servi);
             System.out.println("c "+c+" dc"+dc);
             if (request.getParameter("guardarC") != null) {
-                cm.agregar(c,dc);    
+                cm.agregar(c,dc);  
+                val ="Datos Guardados Correctamente";
             }
+            request.setAttribute("valor", val);
             request.getRequestDispatcher("consulta.jsp").forward(request, response);
         } catch (Exception e) {
         }

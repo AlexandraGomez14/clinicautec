@@ -8,10 +8,8 @@ package com.clinica.controladores;
 import com.clinica.modelo.Cita;
 import com.clinica.modelo.CitaModelo;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -51,10 +49,10 @@ public class CitaController extends HttpServlet {
         processRequest(request, response);
         Cita ci = new Cita();
         CitaModelo cm = new CitaModelo();
-        RequestDispatcher rd = null;
+        String val ="";
         try {
             
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
             ci.setCodCita(request.getParameter("codigoC"));
             ci.setEstado(request.getParameter("estado"));
             ci.setFechaCita(request.getParameter("fCita"));
@@ -66,7 +64,9 @@ public class CitaController extends HttpServlet {
             System.out.println("cita "+ci);
             if (request.getParameter("guardarCita") != null) {
                 cm.agregarCita(ci);
+                val="Cita Registrada";
             }
+            request.setAttribute("valor", val);
             request.getRequestDispatcher("citas.jsp").forward(request, response);
         } catch (Exception e) {
         }

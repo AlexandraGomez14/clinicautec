@@ -1,4 +1,7 @@
 package com.clinica.modelo;
+
+import java.util.Date;
+
 public class Cita {
     private String codCita;
     private String estado;
@@ -8,7 +11,7 @@ public class Cita {
     private String consultorio;
     private String codDoctor;
     private String codPaciente;
-
+    
     public Cita() {
     }
 
@@ -87,6 +90,5 @@ public class Cita {
         this.codPaciente = codPaciente;
     }
 
-   
    
 }

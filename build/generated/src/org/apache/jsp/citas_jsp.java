@@ -104,7 +104,8 @@ public final class citas_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </td>\n");
       out.write("            <th>Fecha de Cita</th>\n");
       out.write("            <td>\n");
-      out.write("                <input type=\"date\" name=\"fCita\" class=\"form-control\" pattern=\"dd/MM/yyyy\"/>\n");
+      out.write("                <!--<input type=\"date\" name=\"fCita\" class=\"form-control\" pattern=\"dd/MM/yyyy\" data-date-format=\"dd/MM/yyyy\"/>-->\n");
+      out.write("                <input type=\"date\" name=\"fCita\" class=\"form-control\" >\n");
       out.write("            </td>\n");
       out.write("        </tr>\n");
       out.write("        <tr>\n");

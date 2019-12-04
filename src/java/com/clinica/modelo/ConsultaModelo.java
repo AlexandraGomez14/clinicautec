@@ -75,8 +75,6 @@ public class ConsultaModelo extends Conexion{
             pre.setString(7, con.getObservacion());
             pre.setString(8, con.getCodDoctor());
             pre.executeUpdate();
-            pre.executeUpdate();
-            this.getCon().commit();
             
             for (int i = 0; i < dc.getCodServicio().length; i++) {
                 PreparedStatement pred;
@@ -89,13 +87,15 @@ public class ConsultaModelo extends Conexion{
 
                 this.getCon().commit();
             }
+            
+            this.getCon().commit();
         } catch (Exception e) {
             this.getCon().rollback();
             System.out.println("error en transaccion "+e);
         }
     }
     
-     public int contar(Object obj) throws Exception{
+    public int contar(Object obj) throws Exception {
         int cont = 0;
         try {
             this.conectar();

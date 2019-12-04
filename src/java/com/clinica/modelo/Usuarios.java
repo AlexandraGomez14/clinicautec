@@ -7,13 +7,13 @@ public class Usuarios implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String usuario;
 	private String contra;
-	private String codigoRol;
+	private int codigoRol;
 
 	public Usuarios() {
 		super();
 	}
 	
-	public Usuarios(String usuario, String contra, String codigoRol) {
+	public Usuarios(String usuario, String contra, int codigoRol) {
 		super();
 		this.usuario = usuario;
 		this.contra = contra;
@@ -31,10 +31,10 @@ public class Usuarios implements Serializable{
 	public void setContra(String contra) {
 		this.contra = contra;
 	}
-	public String getCodigoRol() {
+	public int getCodigoRol() {
 		return codigoRol;
 	}
-	public void setCodigoRol(String codigoRol) {
+	public void setCodigoRol(int codigoRol) {
 		this.codigoRol = codigoRol;
 	}
 }

@@ -32,7 +32,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="principal.jsp">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="far fa-grin-beam"></i>
         </div>
@@ -43,19 +43,16 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+<!--      <li class="nav-item active">
         <a class="nav-link" href="principal.jsp">
           <i class="fas fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
-      </li>
+      </li>-->
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
       <!-- Heading -->
-      <div class="sidebar-heading">
-        Interface
-      </div>
 
 
       <!-- Nav Item - Utilities Collapse Menu -->
@@ -66,7 +63,7 @@
       </li>
          <li class="nav-item">
         <a class="nav-link" href="consulta.jsp">
-          <i class="fal fa-phone-office"></i>
+          <i class="fas fa-laptop-medical"></i>
           <span>Consulta</span></a>
       </li>
 
@@ -74,10 +71,7 @@
       <hr class="sidebar-divider">
 
       <!-- Heading -->
-      <div class="sidebar-heading">
-        Addonss
-      </div>
-
+     
       <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" href="citas.jsp">
